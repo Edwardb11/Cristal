@@ -4,6 +4,13 @@ let fecha = {
 	año: 2021,
 	dias: ["Domingo", "Lunes", "Marzo", "Miercoles", "Jueves", "Viernes", "Sabado"],
 }
-let dt = new Date(fecha.mes + ', ' + fecha.dia + ', ' + fecha.año);
-let text = "Dia de la semana : " + fecha.dias[dt.getUTCDay()];
-document.getElementById('demo').innerHTML=text;
+
+function dt() {
+	return new Date(fecha.mes + ', ' + fecha.dia + ', ' + fecha.año);
+}
+
+function diaDeLaSemana() {
+	return "Dia de la semana : " + fecha.dias[dt().getUTCDay()];
+}
+
+document.getElementById('demo').innerHTML=diaDeLaSemana();
